@@ -1,0 +1,12 @@
+# Usage:
+1. from adorei/java
+2. copy supervisord.conf /
+'''
+[supervisord]
+nodaemon=true
+
+[program:example]
+command=/usr/java/jdk1.8.0_162/jre/bin/java -jar 
+'''
+3. CMD ["supervisord","-c","supervisord.conf"]
+
