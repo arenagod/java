@@ -8,5 +8,5 @@ RUN sed -i.bak -e 's/^\(securerandom.source=\).*/\1file:\/dev\/urandom/' /usr/ja
 RUN ["bash","-c","echo Asia/Shanghai > /etc/timezone && rm -f /etc/localtime && ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime"]
 
 ENV JAVA_HOME /usr/java/jdk1.8.0_162/
-ENV PATH $JAVA_HOME:$PATH
-ENV LANG C.UTF-8
+ENV PATH $JAVA_HOME/bin:$PATH
+ENV LANG en_US.UTF-8
